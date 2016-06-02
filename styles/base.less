@@ -1,0 +1,339 @@
+@import 'syntax-variables';
+
+atom-text-editor, :host {
+  background-color: @syntax-background-color;
+  color: @syntax-text-color;
+
+  .invisible-character {
+    color: @syntax-invisible-character-color;
+  }
+
+  .indent-guide {
+    color: @syntax-indent-guide-color;
+  }
+
+  .wrap-guide {
+    background-color: @syntax-wrap-guide-color;
+  }
+
+  .gutter {
+    background-color: @syntax-gutter-background-color;
+    color: @syntax-gutter-text-color;
+
+    .cursor-line {
+      color: @syntax-gutter-text-color-selected;
+      background: @syntax-gutter-background-color-selected;
+    }
+  }
+
+  .line-number.cursor-line-no-selection {
+    background-color: @syntax-gutter-background-color-selected;
+  }
+
+  .cursor-line {
+    background-color: darken(@syntax-gutter-background-color-selected, 7%);
+  }
+
+  .invisible {
+    color: @syntax-text-color;
+  }
+
+  .cursor {
+    border-color: @syntax-cursor-color;
+  }
+
+  .selection .region {
+    background-color: @syntax-selection-color;
+  }
+
+  div.line:not(.cursor-line) {
+    .trailing-whitespace {
+      background-color: @background-color-error;
+      color: contrast(@background-color-error);
+    }
+  }
+
+  .entity.other.attribute-name {
+    font-style: italic;
+  }
+
+  .search-results .marker .region {
+    background-color: transparent;
+    border: 1px solid @syntax-result-marker-color;
+  }
+
+  .search-results .marker.current-result .region {
+    border: 1px solid @syntax-result-marker-color-selected;
+  }
+
+  .gfm {
+    .markup {
+      &.heading {
+        color: @green-color;
+        font-weight: bold;
+      }
+
+      &.underline {
+        color: @yellow-color;
+        text-decoration: underline;
+      }
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+
+    .italic {
+      font-style: italic;
+    }
+
+    .raw {
+      color: @blue-color;
+    }
+
+    .variable.list {
+      color: @pink-color;
+      font-weight: bold;
+    }
+
+    .link {
+      color: @light-gray-color;
+
+      .entity {
+        color: @purple-color;
+      }
+    }
+  }
+}
+
+.comment {
+  color: @gray-color;
+}
+
+.constant {
+  &.numeric {
+    color: @purple-color;
+  }
+
+  &.language {
+    color: @purple-color;
+  }
+
+  &.character,
+  &.escape,
+  &.other {
+    color: @purple-color;
+  }
+
+  &.type {
+    font-style: italic;
+    color: @blue-color;
+  }
+}
+
+.entity {
+  &.name.class {
+    text-decoration: none;
+    color: @green-color;
+  }
+
+  &.other.inherited-class {
+    font-style: italic;
+    text-decoration: none;
+    color: @green-color;
+  }
+
+  &.name.function {
+    color: @green-color;
+  }
+
+  &.name.instance {
+    color: @blue-color;
+  }
+
+  &.name.tag {
+    color: @pink-color;
+  }
+
+  &.other.attribute-name {
+    color: @green-color;
+  }
+}
+
+.invalid {
+  color: @syntax-cursor-color;
+  background-color: @pink-color;
+
+  &.deprecated {
+    color: @syntax-cursor-color;
+    background-color: @purple-color;
+  }
+}
+
+.keyword {
+  color: @pink-color;
+
+  &.operator.bracket,
+  &.operator.punctuation {
+    color: @white;
+  }
+}
+
+// Prevent underlines from making their way into whitespace elements
+.leading-whitespace,
+.trailing-whitespace {
+  display: inline-block;
+}
+
+.meta {
+  &.class {
+    color: @light-orange-color;
+
+    &.body {
+      color: @syntax-text-color;
+    }
+  }
+
+  &.method-call,
+  &.method {
+    color: @syntax-text-color;
+  }
+
+  &.definition {
+    &.variable {
+      color: @red-color;
+    }
+  }
+
+  &.link {
+    color: @orange-color;
+  }
+
+  &.require {
+    color: @blue-color;
+  }
+
+  &.selector {
+    color: @purple-color;
+  }
+
+  &.separator {
+    background-color: #373b41;
+    color: @syntax-text-color;
+  }
+
+  &.tag {
+    color: @syntax-text-color;
+  }
+}
+
+.punctuation {
+  &.definition {
+    &.comment {
+      color: @gray-color;
+    }
+
+    &.method-parameters,
+    &.function-parameters,
+    &.parameters,
+    &.separator,
+    &.seperator,
+    &.array {
+      color: @syntax-text-color;
+    }
+
+    &.heading,
+    &.identity {
+      color: @blue-color;
+    }
+
+    &.bold {
+      color: @orange-color;
+      font-weight: bold;
+    }
+
+    &.italic {
+      color: @purple-color;
+      font-style: italic;
+    }
+  }
+
+  &.section {
+    &.embedded {
+      color: @dark-red-color;
+    }
+
+    &.method,
+    &.class,
+    &.inner-class {
+      color: @syntax-text-color;
+    }
+  }
+}
+
+.support {
+  &.constant {
+    color: @blue-color;
+  }
+
+  &.function {
+    color: @blue-color;
+
+    &.any-method {
+      color: @blue-color;
+    }
+  }
+
+  &.function.decl {
+    color: @green-color;
+  }
+
+  &.type,
+  &.class {
+    font-style: italic;
+    color: @blue-color;
+  }
+}
+
+.storage {
+  color: @pink-color;
+
+  &.type {
+    font-style: italic;
+    color: @blue-color;
+  }
+}
+
+.string {
+  color: @yellow-color;
+
+  &.regexp {
+    color: @blue-color;
+
+    .source.ruby.embedded {
+      color: @orange-color;
+    }
+  }
+
+  &.other.link {
+    color: @red-color;
+  }
+}
+
+.variable {
+  color: @orange-color;
+
+  &.interpolation {
+    color: @purple-color;
+  }
+
+  &.parameter {
+    font-style: italic;
+    color: @purple-color;
+  }
+
+  // 'this' Javascript
+  &.language.js {
+    color: @pink-color;
+  }
+}
