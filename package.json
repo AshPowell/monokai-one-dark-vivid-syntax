@@ -1,8 +1,9 @@
 {
     "name": "monokai-one-dark-vivid-syntax",
     "theme": "syntax",
-    "version": "1",
+    "version": "0.1.0",
     "description": "Monokai mixed with one dark with some vivid tweaks",
+    "readmeFilename": "README.md",
     "keywords": [
         "syntax",
         "theme",
@@ -11,7 +12,10 @@
         "vivid",
         "saturated"
     ],
-    "repository": "https://github.com/AshPowell/monokai-one-dark-vivid-syntax",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/ashpowell/monokai-one-dark-vivid-syntax.git"
+    },
     "license": "MIT",
     "engines": {
         "atom": ">=1.0.0 <2.0.0"
