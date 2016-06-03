@@ -1,23 +1,23 @@
 {
-    "name": "monokai-one-dark-vivid-syntax",
-    "theme": "syntax",
-    "version": "0.1.0",
-    "description": "Monokai mixed with one dark with some vivid tweaks",
-    "readmeFilename": "README.md",
-    "keywords": [
-        "syntax",
-        "theme",
-        "monokai",
-        "one dark",
-        "vivid",
-        "saturated"
-    ],
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/ashpowell/monokai-one-dark-vivid-syntax.git"
-    },
-    "license": "MIT",
-    "engines": {
-        "atom": ">=1.0.0 <2.0.0"
-    }
+  "name": "monokai-one-dark-vivid-syntax",
+  "theme": "syntax",
+  "version": "0.2.0",
+  "description": "Monokai mixed with one dark with some vivid tweaks",
+  "readmeFilename": "README.md",
+  "keywords": [
+    "syntax",
+    "theme",
+    "monokai",
+    "one dark",
+    "vivid",
+    "saturated"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashpowell/monokai-one-dark-vivid-syntax.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
 }
