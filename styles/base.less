@@ -1,5 +1,14 @@
 @import 'syntax-variables';
 
+.trailingSpace {
+  div.line:not(.cursor-line) {
+    .trailing-whitespace {
+      background-color: @background-color-error;
+      color: contrast(@background-color-error);
+    }
+  }
+}
+
 atom-text-editor, :host {
   background-color: @syntax-background-color;
   color: @syntax-text-color;
@@ -44,13 +53,6 @@ atom-text-editor, :host {
 
   .selection .region {
     background-color: @syntax-selection-color;
-  }
-
-  div.line:not(.cursor-line) {
-    .trailing-whitespace {
-      background-color: @background-color-error;
-      color: contrast(@background-color-error);
-    }
   }
 
   .entity.other.attribute-name {

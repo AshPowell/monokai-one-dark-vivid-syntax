@@ -1,23 +1,32 @@
 {
-  "name": "monokai-one-dark-vivid-syntax",
-  "theme": "syntax",
-  "version": "1.0.0",
-  "description": "Monokai mixed with one dark with some vivid tweaks",
-  "readmeFilename": "README.md",
-  "keywords": [
-    "syntax",
-    "theme",
-    "monokai",
-    "one dark",
-    "vivid",
-    "saturated"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ashpowell/monokai-one-dark-vivid-syntax.git"
-  },
-  "license": "MIT",
-  "engines": {
-    "atom": ">=1.0.0 <2.0.0"
-  }
+    "name": "monokai-one-dark-vivid-syntax",
+    "theme": "syntax",
+    "version": "1.0.0",
+    "description": "Monokai mixed with one dark with some vivid tweaks",
+    "main": "./lib/main",
+    "readmeFilename": "README.md",
+    "keywords": [
+        "syntax",
+        "theme",
+        "monokai",
+        "one dark",
+        "vivid",
+        "saturated"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ashpowell/monokai-one-dark-vivid-syntax.git"
+    },
+    "license": "MIT",
+    "engines": {
+        "atom": ">=1.0.0 <2.0.0"
+    },
+    "configSchema": {
+        "trailingSpaceHighlight": {
+            "title": "Trailing White-space Highlight",
+            "description": "Automatically highlight any trailing white-space in red",
+            "type": "boolean",
+            "default": false
+        }
+    }
 }
